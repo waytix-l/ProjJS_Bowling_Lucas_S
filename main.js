@@ -1,3 +1,4 @@
-import { startGame } from './startGame.js';
+import { createGame, startGame } from './startGame.js';
 
-startGame();
+var game = createGame();
+startGame(game);
