@@ -51,10 +51,11 @@ export function startGame(game) {
 function createPlayer(playerName) {
 
     return {
-        playerName : playerName,
+        playerName: playerName,
+        special: 0,
         try: 0,
-        framesScore : Array(10).fill(0),
-        totalScore : 0
+        framesScore: Array(11).fill(0),
+        totalScore: 0
     }
 
 }
@@ -68,7 +69,7 @@ function addPlayer(game, actualPlayer) {
         actualPlayer++;
         if (actualPlayer > game.playerAmount) {
             console.log("");
-            frame(game);
+            frame(game, 0);
         } else {
             addPlayer(game, actualPlayer);
         }
