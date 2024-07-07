@@ -87,6 +87,9 @@ export function frame(game) {
 
 }
 
+// function that increments each value of the game object to determine which round or turn
+// input : game object
+
 function incrementValues(game) {
 
     game.currentPlayer++;
@@ -109,6 +112,9 @@ function incrementValues(game) {
     }
 
 }
+
+// function that makes the sum of each player points
+// input : game object and the actual player
 
 export function totalScore(game, player) {
     let sum = 0;

@@ -1,6 +1,7 @@
-import { rl } from "./startGame.js";
 import { totalScore } from "./gameLoop.js";
 
+// function that display the end of the game with the points and the winner
+// input : game object
 
 export function endGame(game) {
     console.log("Score final : ")
