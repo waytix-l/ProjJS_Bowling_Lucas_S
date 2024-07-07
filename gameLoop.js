@@ -11,7 +11,7 @@ export function frame(game) {
 
     breakme: {
         let extra = 0;
-        if (game.currentFrame == 2) {
+        if (game.currentFrame == 10) {
             for (let index = 0; index < game.players.length; index++) {
                 if (game.players[index].special > 0) {
                     currentPlayer = game.players[index];
@@ -27,7 +27,7 @@ export function frame(game) {
     }
     
 
-    if (game.currentFrame > 2) {
+    if (game.currentFrame > 10) {
         return endGame(game)
     }
 
@@ -40,7 +40,6 @@ export function frame(game) {
         incrementValues(game);
         return frame(game, 0)
     }
-    console.log(currentPlayer.special);
     rl.question(`${currentPlayer.playerName}, combien de quilles avez-vous renversé ? `, (skittlesAmount) => {
         currentPlayer.try++;
         skittlesAmount = parseInt(skittlesAmount);

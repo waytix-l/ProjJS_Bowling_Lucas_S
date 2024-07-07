@@ -8,7 +8,6 @@ export function endGame(game) {
     let player = 0;
     for (let index = 0; index < game.playerAmount; index++) {
         let scorePlayer = totalScore(game, index);
-        console.log(scorePlayer);
         if (scorePlayer > score) {
             player = index;
             score = scorePlayer;
@@ -16,8 +15,4 @@ export function endGame(game) {
     }
     console.log("");
     console.log(`${game.players[player].playerName} est le/la gagnant(e) !`)
-
-
-    console.log('fafau d\'asle');
-    console.log("fafau d'asle");
 }
